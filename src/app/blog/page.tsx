@@ -1,22 +1,17 @@
 import { Link } from 'next/link'
+import { Metadata } from 'next'
 import { Button } from '@/components/ui/button'
-import { Card } from '@/components/ui/card'
-import { ArrowRight, Calendar, Clock, User } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { blogPosts } from '@/lib/blog-data'
 
-export const metadata = {
-  title: 'Blog - Tips & Informasi Perkebunan Kelapa Sawit',
-  description: 'Artikel lengkap tentang perkebunan kelapa sawit, tips pemupukan, dan cara meningkatkan hasil panen.',
-  keywords: 'blog sawit, tips perkebunan, pemupukan sawit, artikel pertanian',
+export const metadata: Metadata = {
+  title: 'Blog Perkebunan Sawit',
+  description: 'Tips dan informasi perkebunan kelapa sawit',
 }
 
 export default function BlogPage() {
-  const whatsappMessage = encodeURIComponent('Halo, saya ingin konsultasi kebutuhan pupuk kelapa sawit')
-  const whatsappUrl = `https://wa.me/6281234567890?text=${whatsappMessage}`
-
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
-      {/* Header */}
       <section className="bg-gradient-to-br from-green-600 to-green-700 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -28,13 +23,11 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Blog Posts */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
-              <Card key={post.slug} className="overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col">
-                {/* Image */}
+              <div key={post.slug} className="bg-white rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col border">
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src={post.image}
@@ -48,7 +41,6 @@ export default function BlogPage() {
                   </div>
                 </div>
 
-                {/* Content */}
                 <div className="p-6 flex-1 flex flex-col">
                   <h2 className="text-xl font-bold text-gray-900 mb-3 hover:text-green-600 transition-colors">
                     <Link href={`/blog/${post.slug}`}>
@@ -60,33 +52,21 @@ export default function BlogPage() {
                     {post.excerpt}
                   </p>
 
-                  {/* Meta */}
-                  <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
-                      <span>{new Date(post.date).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      <span>{post.readTime}</span>
-                    </div>
-                  </div>
+                  <p className="text-sm text-gray-500 mb-4">{post.readTime} baca</p>
 
-                  {/* CTA Button */}
                   <Link href={`/blog/${post.slug}`}>
-                    <Button variant="outline" className="w-full group">
+                    <Button className="w-full">
                       Baca Selengkapnya
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </Link>
                 </div>
-              </Card>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="bg-green-600 py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -96,23 +76,19 @@ export default function BlogPage() {
             Tim kami siap membantu menentukan kebutuhan pupuk yang tepat untuk perkebunan kelapa sawit Anda
           </p>
           <Button
+            className="bg-white text-green-600 hover:bg-gray-100 px-8 py-6 rounded-full font-semibold"
             asChild
-            size="lg"
-            className="bg-white text-green-600 hover:bg-gray-100 px-8 py-6 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
           >
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-              <span>Konsultasi via WhatsApp</span>
-              <ArrowRight className="w-5 h-5" />
+            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">
+              Konsultasi via WhatsApp
             </a>
           </Button>
         </div>
       </section>
 
-      {/* Back to Home */}
       <div className="py-8 text-center">
         <Link href="/">
-          <Button variant="ghost">
-            <ArrowRight className="w-4 h-4 mr-2 rotate-180" />
+          <Button>
             Kembali ke Beranda
           </Button>
         </Link>
