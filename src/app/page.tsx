@@ -4,6 +4,7 @@ import { Hero } from '@/components/landing/Hero'
 import { Problem } from '@/components/landing/Problem'
 import { Solution } from '@/components/landing/Solution'
 import { Trust } from '@/components/landing/Trust'
+import { TestimonialGallery } from '@/components/landing/TestimonialGallery'
 import { Process } from '@/components/landing/Process'
 import { CTA } from '@/components/landing/CTA'
 import { FAQ } from '@/components/landing/FAQ'
@@ -24,11 +25,12 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <main className="flex-1">
-        <Hero id="home" />
+        <Hero />
         <Problem />
         <Solution />
-        <Trust id="about" />
-        <Process id="services" />
+        <Trust />
+        <TestimonialGallery />
+        <Process />
         <CTA />
         <FAQ />
       </main>
