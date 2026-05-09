@@ -264,14 +264,17 @@ export function TestimonialCarousel() {
             Ingin bergabung dengan ribuan klien puas lainnya?
           </p>
           <Button
+            asChild
             size="lg"
             className="bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
-            onClick={() => {
-              const whatsappMessage = encodeURIComponent('Halo, saya ingin konsultasi kebutuhan pupuk kelapa sawit')
-              window.open(`https://wa.me/6281234567890?text=${whatsappMessage}`, '_blank')
-            }}
           >
-            Konsultasi Sekarang
+            <a
+              href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20konsultasi%20kebutuhan%20pupuk%20kelapa%20sawit"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Konsultasi Sekarang
+            </a>
           </Button>
         </div>
       </div>
