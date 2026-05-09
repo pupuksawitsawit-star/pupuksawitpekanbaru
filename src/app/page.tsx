@@ -4,7 +4,7 @@ import { Hero } from '@/components/landing/Hero'
 import { Problem } from '@/components/landing/Problem'
 import { Solution } from '@/components/landing/Solution'
 import { Trust } from '@/components/landing/Trust'
-import { TestimonialGallery } from '@/components/landing/TestimonialGallery'
+import { TestimonialCarousel } from '@/components/landing/TestimonialCarousel'
 import { Process } from '@/components/landing/Process'
 import { CTA } from '@/components/landing/CTA'
 import { FAQ } from '@/components/landing/FAQ'
@@ -29,7 +29,7 @@ export default function Home() {
         <Problem />
         <Solution />
         <Trust />
-        <TestimonialGallery />
+        <TestimonialCarousel />
         <Process />
         <CTA />
         <FAQ />
