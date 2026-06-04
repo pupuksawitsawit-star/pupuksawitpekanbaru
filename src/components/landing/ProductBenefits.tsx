@@ -1,5 +1,6 @@
 'use client'
 
+import { getWhatsAppUrl } from '@/lib/whatsapp'
 import { TrendingUp, Sprout, Shield, Recycle } from 'lucide-react'
 
 export function ProductBenefits() {
@@ -79,7 +80,7 @@ export function ProductBenefits() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20konsultasi%20kebutuhan%20pupuk%20kelapa%20sawit"
+                href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"

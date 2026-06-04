@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { ArrowRight, Calendar, Clock, User, MessageCircle } from 'lucide-react'
 import { getBlogPostBySlug, getRelatedPosts, type BlogPost } from '@/lib/blog-data'
+import { getWhatsAppUrl } from '@/lib/whatsapp'
 import { notFound } from 'next/navigation'
 
 interface BlogPostPageProps {
@@ -37,8 +38,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   const relatedPosts = getRelatedPosts(params.slug)
-  const whatsappMessage = encodeURIComponent('Halo, saya ingin konsultasi kebutuhan pupuk kelapa sawit')
-  const whatsappUrl = `https://wa.me/6281234567890?text=${whatsappMessage}`
+  const whatsappUrl = getWhatsAppUrl()
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">

@@ -1,5 +1,6 @@
 'use client'
 
+import { WHATSAPP_DISPLAY_NUMBER } from '@/lib/whatsapp'
 import { Phone, Mail, MapPin } from 'lucide-react'
 
 export function Footer() {
@@ -18,7 +19,7 @@ export function Footer() {
             <div className="space-y-2 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-green-400" />
-                <span>+62 812 3456 7890</span>
+                <span>{WHATSAPP_DISPLAY_NUMBER}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-green-400" />

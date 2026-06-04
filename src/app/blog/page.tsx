@@ -1,3 +1,5 @@
+import { getWhatsAppUrl } from '@/lib/whatsapp'
+
 export default function BlogPage() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
@@ -39,7 +41,7 @@ export default function BlogPage() {
             Tim kami siap membantu menentukan kebutuhan pupuk yang tepat untuk perkebunan kelapa sawit Anda
           </p>
           <a
-            href="https://wa.me/6281234567890"
+            href={getWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-white text-green-600 px-8 py-6 rounded-full font-semibold hover:bg-gray-100 transition-all"

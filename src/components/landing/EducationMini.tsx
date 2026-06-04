@@ -1,5 +1,6 @@
 'use client'
 
+import { getWhatsAppUrl } from '@/lib/whatsapp'
 import { BookOpen, Lightbulb, TrendingUp, AlertTriangle } from 'lucide-react'
 
 export function EducationMini() {
@@ -86,7 +87,7 @@ export function EducationMini() {
                   Butuh bantuan menentukan program pemupukan yang tepat untuk perkebunan kelapa sawit Anda? Tim kami siap memberikan konsultasi profesional dengan analisa kebutuhan nutrisi yang komprehensif.
                 </p>
                 <a
-                  href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20konsultasi%20kebutuhan%20pupuk%20kelapa%20sawit"
+                  href={getWhatsAppUrl()}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300"

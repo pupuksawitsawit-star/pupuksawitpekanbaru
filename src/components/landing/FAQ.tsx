@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
+import { getWhatsAppUrl } from '@/lib/whatsapp'
 import { HelpCircle } from 'lucide-react'
 
 export function FAQ() {
@@ -78,7 +79,7 @@ export function FAQ() {
             Masih ada pertanyaan lain?
           </p>
           <a
-            href={`https://wa.me/6281234567890?text=${encodeURIComponent('Halo, saya ingin konsultasi kebutuhan pupuk kelapa sawit')}`}
+            href={getWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-semibold text-lg transition-colors"

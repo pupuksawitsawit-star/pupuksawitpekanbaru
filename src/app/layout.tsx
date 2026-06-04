@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { WHATSAPP_DISPLAY_NUMBER } from '@/lib/whatsapp'
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 
@@ -112,7 +113,7 @@ export default function RootLayout({
                 "addressCountry": "ID",
                 "addressRegion": "Indonesia"
               },
-              "telephone": "+62-812-3456-7890",
+              "telephone": WHATSAPP_DISPLAY_NUMBER,
               "email": "info@pupuksawit.com",
               "priceRange": "$$$",
               "areaServed": [

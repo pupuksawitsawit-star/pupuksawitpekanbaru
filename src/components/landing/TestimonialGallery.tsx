@@ -2,6 +2,7 @@
 
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import { getWhatsAppUrl } from '@/lib/whatsapp'
 import { Star, Quote, ChevronLeft, ChevronRight, Building2, MapPin } from 'lucide-react'
 import { useState } from 'react'
 import Image from 'next/image'
@@ -302,8 +303,7 @@ export function TestimonialGallery() {
             size="lg"
             className="bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
             onClick={() => {
-              const whatsappMessage = encodeURIComponent('Halo, saya ingin konsultasi kebutuhan pupuk kelapa sawit')
-              window.open(`https://wa.me/6281234567890?text=${whatsappMessage}`, '_blank')
+              window.open(getWhatsAppUrl(), '_blank')
             }}
           >
             Konsultasi Sekarang

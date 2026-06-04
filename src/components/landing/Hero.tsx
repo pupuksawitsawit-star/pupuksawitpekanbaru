@@ -1,12 +1,12 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
+import { getWhatsAppUrl } from '@/lib/whatsapp'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 
 export function Hero() {
-  const whatsappMessage = encodeURIComponent('Halo, saya ingin konsultasi kebutuhan pupuk kelapa sawit')
-  const whatsappUrl = `https://wa.me/6281234567890?text=${whatsappMessage}`
+  const whatsappUrl = getWhatsAppUrl()
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">

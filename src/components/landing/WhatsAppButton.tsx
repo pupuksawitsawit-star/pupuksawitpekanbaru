@@ -1,6 +1,7 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
+import { getWhatsAppUrl } from '@/lib/whatsapp'
 import { MessageCircle } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
@@ -17,8 +18,7 @@ export function WhatsAppButton() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const whatsappMessage = encodeURIComponent('Halo, saya ingin konsultasi kebutuhan pupuk kelapa sawit')
-  const whatsappUrl = `https://wa.me/6281234567890?text=${whatsappMessage}`
+  const whatsappUrl = getWhatsAppUrl()
 
   const handleClick = () => {
     // Track WhatsApp click (for Meta Pixel)

@@ -2,6 +2,7 @@
 
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import { getWhatsAppUrl } from '@/lib/whatsapp'
 import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
@@ -233,7 +234,7 @@ export function TestimonialCarousel() {
             className="bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
           >
             <a
-              href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20konsultasi%20kebutuhan%20pupuk%20kelapa%20sawit"
+              href={getWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -1,0 +1,11 @@
+.env*
+.next
+node_modules
+skills
+upload
+download
+examples
+mini-services
+.zscripts
+*.log
+db/*.db

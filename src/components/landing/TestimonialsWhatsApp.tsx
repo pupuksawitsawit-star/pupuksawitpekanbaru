@@ -1,5 +1,6 @@
 'use client'
 
+import { getWhatsAppUrl } from '@/lib/whatsapp'
 import { MessageCircle, Star, MapPin, Building2, Calendar } from 'lucide-react'
 
 export function TestimonialsWhatsApp() {
@@ -131,7 +132,7 @@ export function TestimonialsWhatsApp() {
               Dapatkan supply pupuk kelapa sawit berkualitas tinggi dengan layanan profesional dan pengiriman terpercaya untuk perkebunan Anda.
             </p>
             <a
-              href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20konsultasi%20kebutuhan%20pupuk%20kelapa%20sawit"
+              href={getWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-10 py-4 bg-white text-green-600 hover:bg-gray-100 font-bold rounded-xl transition-all duration-300 shadow-lg"

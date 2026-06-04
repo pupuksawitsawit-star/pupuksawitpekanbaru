@@ -5,7 +5,6 @@ import { Problem } from '@/components/landing/Problem'
 import { Solution } from '@/components/landing/Solution'
 import { Trust } from '@/components/landing/Trust'
 import { TestimonialCarousel } from '@/components/landing/TestimonialCarousel'
-import { Process } from '@/components/landing/Process'
 import { CTA } from '@/components/landing/CTA'
 import { FAQ } from '@/components/landing/FAQ'
 import { WhatsAppButton } from '@/components/landing/WhatsAppButton'
@@ -30,7 +29,6 @@ export default function Home() {
         <Solution />
         <Trust />
         <TestimonialCarousel />
-        <Process />
         <CTA />
         <FAQ />
       </main>
