@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Supplier Pupuk Kelapa Sawit Skala Besar | Pupuk Sawit",
-  description: "Supply pupuk kelapa sawit 10–100 ton per bulan dengan kualitas terjamin dan pengiriman stabil. Supplier terpercaya untuk perkebunan sawit di seluruh Indonesia.",
+  description: "Supply pupuk kelapa sawit 100 - 200 Ton/Bulan dengan kualitas terjamin dan pengiriman stabil. Supplier terpercaya untuk perkebunan sawit di seluruh Indonesia.",
   keywords: ["pupuk kelapa sawit", "supplier pupuk sawit", "distributor pupuk sawit", "pupuk sawit berkualitas", "supply pupuk perkebunan"],
   authors: [{ name: "Pupuk Sawit" }],
   icons: {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Supplier Pupuk Kelapa Sawit Skala Besar",
-    description: "Supply pupuk kelapa sawit 10–100 ton per bulan dengan kualitas terjamin dan pengiriman stabil",
+    description: "Supply pupuk kelapa sawit 100 - 200 Ton/Bulan dengan kualitas terjamin dan pengiriman stabil",
     url: "https://pupuksawit.com",
     siteName: "Pupuk Sawit",
     type: "website",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Supplier Pupuk Kelapa Sawit Skala Besar",
-    description: "Supply pupuk kelapa sawit 10–100 ton per bulan dengan kualitas terjamin",
+    description: "Supply pupuk kelapa sawit 100 - 200 Ton/Bulan dengan kualitas terjamin",
   },
   robots: {
     index: true,

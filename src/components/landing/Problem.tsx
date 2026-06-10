@@ -28,24 +28,24 @@ export function Problem() {
   ]
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-12 md:py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
             Masalah yang Sering Dihadapi
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-base md:text-lg text-gray-600">
             Jangan biarkan masalah ini menghambat produktivitas perkebunan Anda
           </p>
         </div>
 
         {/* Problem Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-6xl mx-auto">
           {problems.map((problem, index) => (
             <Card
               key={index}
-              className="p-6 hover:shadow-xl transition-all duration-300 border-l-4 border-red-500"
+              className="p-5 md:p-6 hover:shadow-xl transition-all duration-300 border-l-4 border-red-500"
             >
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
@@ -54,10 +54,10 @@ export function Problem() {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">
                     {problem.title}
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-sm md:text-base text-gray-600">
                     {problem.description}
                   </p>
                 </div>
@@ -67,8 +67,8 @@ export function Problem() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-12">
-          <p className="text-gray-700 font-medium">
+        <div className="text-center mt-8 md:mt-12">
+          <p className="text-sm md:text-base text-gray-700 font-medium">
             Apakah Anda mengalami masalah yang sama?
           </p>
         </div>

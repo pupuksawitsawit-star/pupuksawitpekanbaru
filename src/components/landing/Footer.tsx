@@ -78,7 +78,7 @@ export function Footer() {
         <div className="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
           <p>&copy; {currentYear} Pupuk Sawit. Hak Cipta Dilindungi.</p>
           <p className="mt-2">
-            Supplier pupuk kelapa sawit skala besar - 10-100 ton per bulan
+            Supplier pupuk kelapa sawit skala besar - 100 - 200 Ton/Bulan
           </p>
         </div>
       </div>

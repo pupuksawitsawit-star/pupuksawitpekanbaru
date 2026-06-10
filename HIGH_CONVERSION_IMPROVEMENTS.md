@@ -17,7 +17,7 @@ Landing page telah ditingkatkan secara signifikan untuk meningkatkan conversion 
 ### After (High Conversion):
 - **Urgency Badge**: "Slot Pengiriman Terbatas - Kontrak Sekarang" (dengan animasi pulse)
 - **Headline Lebih Kuat**: "Supplier Pupuk Kelapa Sawit Terpercaya & Teruji"
-- **Value Props Subheadline**: Menyoroti "10-100 ton/bulan", "Kualitas lab teruji", "Siap kirim seluruh Indonesia"
+- **Value Props Subheadline**: Menyoroti "100 - 200 Ton/Bulan", "Kualitas lab teruji", "Siap kirim seluruh Indonesia"
 - **Key Benefits Row**: 3 benefits with icons (Kualitas Terjamin, Pengiriman Cepat, Garansi Produk)
 - **CTA Button Lebih Powerful**:
   - Gradient background
@@ -155,7 +155,7 @@ Landing page telah ditingkatkan secara signifikan untuk meningkatkan conversion 
 ### C. VALUE PROPOSITION
 - ✅ "Kualitas lab teruji"
 - ✅ "Siap kirim seluruh Indonesia"
-- ✅ "10-100 ton/bulan" (spesifik volume)
+- ✅ "100 - 200 Ton/Bulan" (spesifik volume)
 - ✅ "Hemat hingga 15% dengan kontrak panjang"
 
 ### D. MULTIPLE CTAs

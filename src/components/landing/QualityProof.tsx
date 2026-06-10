@@ -4,35 +4,35 @@ import { CheckCircle2, Shield, Award, FileCheck } from 'lucide-react'
 
 export function QualityProof() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-12 md:py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <Shield className="w-8 h-8 text-green-600" />
+        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16">
+          <div className="w-14 h-14 md:w-16 md:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
+            <Shield className="w-7 h-7 md:w-8 md:h-8 text-green-600" />
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
             Teruji Laboratorium & Kualitas Terjamin
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
             Setiap batch pupuk kami telah melalui pengujian ketat untuk memastikan kualitas dan efektivitas terbaik untuk perkebunan kelapa sawit Anda.
           </p>
         </div>
 
         {/* Quality Points */}
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-12">
             {/* Lab Testing Card */}
-            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-green-500">
+            <div className="bg-white rounded-xl p-5 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-green-500">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center">
                   <Award className="w-7 h-7 text-green-600" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2 md:mb-3">
                     Pengujian Laboratorium Independen
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                     Setiap produk pupuk kelapa sawit kami diuji oleh laboratorium bersertifikasi untuk memastikan kandungan nutrisi sesuai dengan spesifikasi yang tertera. Hasil uji laboratorium tersedia untuk klien yang memerlukan dokumentasi kualitas.
                   </p>
                 </div>
@@ -40,16 +40,16 @@ export function QualityProof() {
             </div>
 
             {/* Complete Nutrients Card */}
-            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-green-500">
+            <div className="bg-white rounded-xl p-5 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-green-500">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center">
                   <FileCheck className="w-7 h-7 text-green-600" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2 md:mb-3">
                     Kandungan Nutrisi Lengkap dan Seimbang
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                     Formulasi pupuk kami mengandung keseimbangan Nitrogen (N), Fosfor (P), Kalium (K), serta mikronutrien penting seperti Magnesium, Boron, dan Zat Besi yang dibutuhkan tanaman kelapa sawit untuk pertumbuhan optimal dan hasil panen maksimal.
                   </p>
                 </div>
@@ -58,8 +58,8 @@ export function QualityProof() {
           </div>
 
           {/* Additional Quality Points */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-5 md:p-6 border border-green-200">
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                 <div>
@@ -73,7 +73,7 @@ export function QualityProof() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200">
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-5 md:p-6 border border-green-200">
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                 <div>
@@ -87,7 +87,7 @@ export function QualityProof() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200">
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-5 md:p-6 border border-green-200">
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                 <div>
@@ -103,13 +103,13 @@ export function QualityProof() {
           </div>
 
           {/* Lab Document Placeholder */}
-          <div className="bg-gradient-to-r from-green-600 to-green-700 rounded-2xl p-8 text-white mb-8">
+          <div className="bg-gradient-to-r from-green-600 to-green-700 rounded-2xl p-5 md:p-8 text-white mb-6 md:mb-8">
             <div className="flex flex-col md:flex-row items-center gap-6">
               <div className="flex-1">
-                <h3 className="text-2xl font-bold mb-3">
+                <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3">
                   Dokumentasi Uji Laboratorium Tersedia
                 </h3>
-                <p className="text-green-100 text-lg">
+                <p className="text-sm md:text-lg text-green-100">
                   Untuk kebutuhan dokumentasi dan verifikasi kualitas, hasil uji laboratorium dapat disediakan bersama setiap pengiriman.
                 </p>
               </div>

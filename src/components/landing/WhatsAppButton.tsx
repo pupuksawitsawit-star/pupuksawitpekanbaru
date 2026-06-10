@@ -1,23 +1,9 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
 import { getWhatsAppUrl } from '@/lib/whatsapp'
 import { MessageCircle } from 'lucide-react'
-import { useEffect, useState } from 'react'
 
 export function WhatsAppButton() {
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    // Show button after scrolling down a bit
-    const handleScroll = () => {
-      setIsVisible(window.scrollY > 300)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
   const whatsappUrl = getWhatsAppUrl()
 
   const handleClick = () => {
@@ -27,27 +13,20 @@ export function WhatsAppButton() {
     }
   }
 
-  if (!isVisible) return null
-
   return (
-    <div className="fixed bottom-6 right-6 z-50 animate-in fade-in slide-in-from-bottom-4 duration-300">
-      <Button
-        asChild
-        size="lg"
-        className="w-16 h-16 rounded-full bg-green-600 hover:bg-green-700 shadow-2xl hover:scale-110 transition-all duration-300 flex items-center justify-center p-0"
+    <div className="fixed bottom-5 right-4 md:bottom-6 md:right-6 z-50 animate-in fade-in slide-in-from-bottom-4 duration-300">
+      <a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat via WhatsApp"
+        className="relative z-10 flex w-14 h-14 md:w-16 md:h-16 items-center justify-center rounded-full bg-green-600 text-white shadow-2xl transition-all duration-300 hover:scale-110 hover:bg-green-700"
         onClick={handleClick}
       >
-        <a
-          href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Chat via WhatsApp"
-        >
-          <MessageCircle className="w-8 h-8" />
-        </a>
-      </Button>
+        <MessageCircle className="w-7 h-7 md:w-8 md:h-8" />
+      </a>
       {/* Pulse Animation Ring */}
-      <div className="absolute inset-0 -m-2 rounded-full bg-green-400 opacity-30 animate-ping" />
+      <div className="pointer-events-none absolute inset-0 -m-2 rounded-full bg-green-400 opacity-30 animate-ping" />
     </div>
   )
 }

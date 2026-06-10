@@ -94,18 +94,18 @@ export function TestimonialCarousel() {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-b from-green-50 to-white">
+    <section className="py-12 md:py-20 bg-gradient-to-b from-green-50 to-white">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-4xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+        <div className="text-center max-w-4xl mx-auto mb-8 md:mb-12">
+          <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-xs md:text-sm font-semibold mb-4 md:mb-6">
             <Star className="w-4 h-4" />
             <span>TESTIMONI KLIEN</span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 md:mb-6">
             Apa Kata Klien Kami?
           </h2>
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+          <p className="text-base md:text-xl text-gray-700 leading-relaxed">
             Lebih dari <span className="text-green-600 font-bold">2500+ perkebunan</span> telah 
             mempercayakan kebutuhan pupuk mereka kepada kami.
           </p>
@@ -113,13 +113,13 @@ export function TestimonialCarousel() {
 
         {/* Carousel */}
         <div className="max-w-4xl mx-auto">
-          <Card className="p-8 md:p-12 border-2 border-green-200 shadow-2xl bg-white">
+          <Card className="p-5 md:p-12 border-2 border-green-200 shadow-xl md:shadow-2xl bg-white">
             {/* Quote Icon */}
-            <Quote className="w-12 h-12 text-green-200 mb-6" />
+            <Quote className="w-9 h-9 md:w-12 md:h-12 text-green-200 mb-4 md:mb-6" />
             
             {/* Testimonial Content */}
-            <div className="space-y-6">
-              <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium">
+            <div className="space-y-4 md:space-y-6">
+              <p className="text-base md:text-2xl text-gray-700 leading-relaxed font-medium">
                 "{testimonials[currentIndex].content}"
               </p>
 
@@ -129,11 +129,11 @@ export function TestimonialCarousel() {
               </div>
 
               {/* Author Info */}
-              <div className="pt-6 border-t border-gray-200">
-                <h4 className="text-xl font-bold text-gray-900 mb-1">
+              <div className="pt-5 md:pt-6 border-t border-gray-200">
+                <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-1">
                   {testimonials[currentIndex].name}
                 </h4>
-                <p className="text-green-600 font-semibold mb-1">
+                <p className="text-sm md:text-base text-green-600 font-semibold mb-1">
                   {testimonials[currentIndex].role}
                 </p>
                 <p className="text-gray-600 text-sm">
@@ -143,18 +143,17 @@ export function TestimonialCarousel() {
             </div>
 
             {/* Navigation Buttons */}
-            <div className="flex items-center justify-between mt-8 pt-6 border-t border-gray-200">
+            <div className="grid grid-cols-2 gap-3 mt-6 md:mt-8 pt-5 md:pt-6 border-t border-gray-200 md:flex md:items-center md:justify-between">
               <Button
                 variant="outline"
-                size="lg"
                 onClick={handlePrevious}
-                className="border-2 hover:bg-green-50 hover:border-green-400 hover:text-green-700"
+                className="h-11 px-3 text-sm border-2 hover:bg-green-50 hover:border-green-400 hover:text-green-700 md:h-12 md:px-6 md:text-base"
               >
-                <ChevronLeft className="w-5 h-5 mr-2" />
+                <ChevronLeft className="w-4 h-4 mr-1.5 md:w-5 md:h-5 md:mr-2" />
                 Sebelumnya
               </Button>
 
-              <div className="flex items-center gap-2">
+              <div className="order-3 col-span-2 flex items-center justify-center gap-2 md:order-none md:col-span-1">
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
@@ -171,17 +170,16 @@ export function TestimonialCarousel() {
 
               <Button
                 variant="outline"
-                size="lg"
                 onClick={handleNext}
-                className="border-2 hover:bg-green-50 hover:border-green-400 hover:text-green-700"
+                className="h-11 px-3 text-sm border-2 hover:bg-green-50 hover:border-green-400 hover:text-green-700 md:h-12 md:px-6 md:text-base"
               >
                 Selanjutnya
-                <ChevronRight className="w-5 h-5 ml-2" />
+                <ChevronRight className="w-4 h-4 ml-1.5 md:w-5 md:h-5 md:ml-2" />
               </Button>
             </div>
 
             {/* Slide Counter */}
-            <div className="text-center mt-6">
+            <div className="text-center mt-5 md:mt-6">
               <p className="text-sm text-gray-500">
                 Testimoni {currentIndex + 1} dari {testimonials.length}
               </p>
@@ -189,8 +187,8 @@ export function TestimonialCarousel() {
           </Card>
 
           {/* Auto-play Indicator */}
-          <div className="text-center mt-6">
-            <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
+          <div className="text-center mt-5 md:mt-6">
+            <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-xs md:text-sm font-medium">
               <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
               <span>Auto-slide setiap 4 detik</span>
             </div>
@@ -198,8 +196,8 @@ export function TestimonialCarousel() {
         </div>
 
         {/* Bottom Stats */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-green-200">
+        <div className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
+          <div className="text-center p-5 md:p-6 bg-white rounded-xl shadow-lg border border-green-200">
             <div className="flex justify-center gap-1 mb-2">
               {Array.from({ length: 5 }).map((_, i) => (
                 <Star
@@ -212,26 +210,26 @@ export function TestimonialCarousel() {
             <p className="text-sm text-gray-600">Rating Rata-rata</p>
           </div>
 
-          <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-green-200">
-            <p className="text-4xl font-bold text-green-600 mb-2">98%</p>
+          <div className="text-center p-5 md:p-6 bg-white rounded-xl shadow-lg border border-green-200">
+            <p className="text-3xl md:text-4xl font-bold text-green-600 mb-2">98%</p>
             <p className="text-sm text-gray-600">Klien Puas & Repeat Order</p>
           </div>
 
-          <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-green-200">
-            <p className="text-4xl font-bold text-gray-900 mb-2">2500+</p>
+          <div className="text-center p-5 md:p-6 bg-white rounded-xl shadow-lg border border-green-200">
+            <p className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">2500+</p>
             <p className="text-sm text-gray-600">Total Klien</p>
           </div>
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
-          <p className="text-gray-700 text-lg mb-4">
+        <div className="text-center mt-8 md:mt-12">
+          <p className="text-gray-700 text-base md:text-lg mb-4">
             Ingin bergabung dengan ribuan klien puas lainnya?
           </p>
           <Button
             asChild
             size="lg"
-            className="bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+            className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
           >
             <a
               href={getWhatsAppUrl()}

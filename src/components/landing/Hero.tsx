@@ -9,7 +9,7 @@ export function Hero() {
   const whatsappUrl = getWhatsAppUrl()
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[92svh] md:min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -23,25 +23,25 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20 text-center">
-        <div className="max-w-4xl mx-auto space-y-8">
+      <div className="relative z-10 container mx-auto px-4 py-16 md:py-20 text-center">
+        <div className="max-w-4xl mx-auto space-y-6 md:space-y-8">
           {/* Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
             Supplier Pupuk Kelapa Sawit Skala Besar
-            <span className="block text-green-400 mt-2">(10–100 Ton/Bulan)</span>
+            <span className="block text-green-400 mt-2">(100 - 200 Ton/Bulan)</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-2xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
             Supply stabil, kualitas terjamin, siap kirim ke berbagai wilayah
           </p>
 
           {/* CTA Button */}
-          <div className="pt-6">
+          <div className="pt-3 md:pt-6">
             <Button
               asChild
               size="lg"
-              className="bg-green-600 hover:bg-green-700 text-white text-lg px-8 py-6 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               onClick={() => {
                 // Track WhatsApp click (for Meta Pixel)
                 if (typeof window !== 'undefined' && (window as any).fbq) {
@@ -60,7 +60,7 @@ export function Hero() {
           </div>
 
           {/* Trust Badges */}
-          <div className="pt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+          <div className="pt-6 md:pt-12 grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6 max-w-3xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
               <p className="text-white font-semibold text-lg">10+ Tahun</p>
               <p className="text-green-300 text-sm">Pengalaman</p>
@@ -78,7 +78,7 @@ export function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-5 md:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center pt-2">
           <div className="w-1.5 h-3 bg-white/70 rounded-full" />
         </div>

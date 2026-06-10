@@ -9,26 +9,26 @@ export function CTA() {
   const whatsappUrl = getWhatsAppUrl()
 
   return (
-    <section className="py-20 bg-gradient-to-br from-green-600 to-green-700">
+    <section className="py-12 md:py-20 bg-gradient-to-br from-green-600 to-green-700">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 md:mb-4">
             Diskusikan Kebutuhan Pupuk Anda Sekarang
           </h2>
-          <p className="text-lg text-green-100">
+          <p className="text-base md:text-lg text-green-100">
             Konsultasi gratis tanpa komitmen. Kami siap membantu menemukan solusi terbaik.
           </p>
         </div>
 
         <div className="max-w-2xl mx-auto">
-          <Card className="p-8 bg-white">
-            <div className="text-center space-y-6">
+          <Card className="p-5 md:p-8 bg-white">
+            <div className="text-center space-y-5 md:space-y-6">
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
                   Respon Cepat via WhatsApp
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-sm md:text-base text-gray-600">
                   Dapatkan jawaban dalam 30 menit atau kurang
                 </p>
               </div>
@@ -36,7 +36,7 @@ export function CTA() {
               <Button
                 asChild
                 size="lg"
-                className="w-full bg-green-600 hover:bg-green-700 text-white text-lg py-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                className="w-full bg-green-600 hover:bg-green-700 text-white text-base md:text-lg py-5 md:py-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
                 onClick={() => {
                   // Track WhatsApp click (for Meta Pixel)
                   if (typeof window !== 'undefined' && (window as any).fbq) {
@@ -50,12 +50,12 @@ export function CTA() {
                 </a>
               </Button>
 
-              <div className="space-y-3 pt-4">
-                <div className="flex items-center justify-center gap-2 text-gray-600">
+              <div className="space-y-3 pt-2 md:pt-4">
+                <div className="flex items-center justify-center gap-2 text-sm md:text-base text-gray-600">
                   <Phone className="w-5 h-5 text-green-600" />
                   <span>{WHATSAPP_DISPLAY_NUMBER}</span>
                 </div>
-                <div className="flex items-center justify-center gap-2 text-gray-600">
+                <div className="flex items-center justify-center gap-2 text-sm md:text-base text-gray-600">
                   <Mail className="w-5 h-5 text-green-600" />
                   <span>info@pupuksawit.com</span>
                 </div>

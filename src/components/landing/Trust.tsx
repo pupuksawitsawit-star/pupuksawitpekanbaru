@@ -47,32 +47,32 @@ export function Trust() {
   ]
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-12 md:py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
             Mengapa Memilih Kami?
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-base md:text-lg text-gray-600">
             Keunggulan yang membuat kami menjadi mitra terpercaya bagi perkebunan sawit
           </p>
         </div>
 
         {/* Trust Points */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto mb-8 md:mb-16">
           {trustPoints.map((point, index) => (
             <Card
               key={index}
-              className="p-6 text-center hover:shadow-xl transition-all duration-300"
+              className="p-5 md:p-6 text-center hover:shadow-xl transition-all duration-300"
             >
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <point.icon className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">
                 {point.title}
               </h3>
-              <p className="text-gray-600">
+              <p className="text-sm md:text-base text-gray-600">
                 {point.description}
               </p>
             </Card>
@@ -80,41 +80,41 @@ export function Trust() {
         </div>
 
         {/* Statistics */}
-        <div className="bg-green-600 rounded-2xl p-8 mb-16 max-w-5xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div className="bg-green-600 rounded-2xl p-5 md:p-8 mb-8 md:mb-16 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8 text-center">
             <div>
-              <p className="text-4xl md:text-5xl font-bold text-white mb-2">10+</p>
-              <p className="text-green-100">Tahun Pengalaman</p>
+              <p className="text-3xl md:text-5xl font-bold text-white mb-1 md:mb-2">10+</p>
+              <p className="text-sm md:text-base text-green-100">Tahun Pengalaman</p>
             </div>
             <div>
-              <p className="text-4xl md:text-5xl font-bold text-white mb-2">500+</p>
-              <p className="text-green-100">Perkebunan Dilayani</p>
+              <p className="text-3xl md:text-5xl font-bold text-white mb-1 md:mb-2">500+</p>
+              <p className="text-sm md:text-base text-green-100">Perkebunan Dilayani</p>
             </div>
             <div>
-              <p className="text-4xl md:text-5xl font-bold text-white mb-2">5000+</p>
-              <p className="text-green-100">Ton Terkirim/Bulan</p>
+              <p className="text-3xl md:text-5xl font-bold text-white mb-1 md:mb-2">5000+</p>
+              <p className="text-sm md:text-base text-green-100">Ton Terkirim/Bulan</p>
             </div>
             <div>
-              <p className="text-4xl md:text-5xl font-bold text-white mb-2">98%</p>
-              <p className="text-green-100">Klien Puas</p>
+              <p className="text-3xl md:text-5xl font-bold text-white mb-1 md:mb-2">98%</p>
+              <p className="text-sm md:text-base text-green-100">Klien Puas</p>
             </div>
           </div>
         </div>
 
         {/* Testimonials */}
         <div className="max-w-6xl mx-auto">
-          <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">
+          <h3 className="text-xl md:text-3xl font-bold text-center text-gray-900 mb-5 md:mb-8">
             Apa Kata Klien Kami?
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-all duration-300">
+              <Card key={index} className="p-5 md:p-6 hover:shadow-lg transition-all duration-300">
                 <div className="flex mb-3">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <p className="text-gray-600 mb-4 italic">"{testimonial.text}"</p>
+                <p className="text-sm md:text-base text-gray-600 mb-4 italic">"{testimonial.text}"</p>
                 <div className="border-t pt-4">
                   <p className="font-semibold text-gray-900">{testimonial.name}</p>
                   <p className="text-sm text-gray-500">{testimonial.role} • {testimonial.location}</p>
