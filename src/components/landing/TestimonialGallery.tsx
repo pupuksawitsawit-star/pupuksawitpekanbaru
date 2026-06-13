@@ -202,7 +202,7 @@ export function TestimonialGallery() {
                 <div className="relative flex-shrink-0">
                   <Image
                     src={testimonial.avatar}
-                    alt={testimonial.name}
+                    alt={`Testimoni pelanggan pupuk sawit ${testimonial.name}`}
                     width={60}
                     height={60}
                     className="rounded-full object-cover"

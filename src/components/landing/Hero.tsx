@@ -14,7 +14,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80"
-          alt="Palm oil plantation"
+          alt="Perkebunan kelapa sawit untuk supply pupuk sawit Pekanbaru"
           fill
           className="object-cover"
           priority

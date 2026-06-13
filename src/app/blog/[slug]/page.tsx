@@ -46,7 +46,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
       <section className="relative h-[50vh] overflow-hidden">
         <img
           src={post.image}
-          alt={post.title}
+          alt={`Artikel pupuk kelapa sawit: ${post.title}`}
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/70" />
@@ -171,7 +171,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                       <div className="relative h-48">
                         <img
                           src={relatedPost.image}
-                          alt={relatedPost.title}
+                          alt={`Artikel terkait pupuk sawit: ${relatedPost.title}`}
                           className="w-full h-full object-cover"
                         />
                       </div>

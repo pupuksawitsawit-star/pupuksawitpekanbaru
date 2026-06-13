@@ -7,19 +7,19 @@ export function LabProof() {
   const results = [
     ['pH', '7,40'],
     ['N-Total', '2,27%'],
-    ['P₂O₅', '7,27%'],
-    ['K₂O', '17,24%'],
+    ['P2O5', '7,27%'],
+    ['K2O', '17,24%'],
     ['C-Organik', '28,59%'],
     ['C/N Ratio', '12,46'],
     ['Bahan ikutan', '0%'],
-    ['Ukuran butir 2–4,75 mm', '99,32%'],
+    ['Ukuran butir 2-4,75 mm', '99,32%'],
   ]
 
   const badges = [
     { icon: FlaskConical, label: 'Lab Resmi' },
     { icon: BadgeCheck, label: 'Kandungan Terukur' },
     { icon: Leaf, label: 'Aman untuk Tanah' },
-    { icon: PackageCheck, label: 'Siap Supply Besar' },
+    { icon: PackageCheck, label: 'Produksi Skala Besar' },
   ]
 
   return (
@@ -38,7 +38,7 @@ export function LabProof() {
           <div className="relative aspect-[3/4] overflow-hidden rounded-xl border border-green-200 bg-green-50 shadow-lg">
             <Image
               src="/images/UJI LAB.webp"
-              alt="Hasil uji laboratorium pupuk organik padat"
+              alt="Hasil uji laboratorium Universitas Andalas untuk pupuk organik sawit"
               fill
               className="object-contain p-3"
               sizes="(max-width: 1024px) 100vw, 50vw"

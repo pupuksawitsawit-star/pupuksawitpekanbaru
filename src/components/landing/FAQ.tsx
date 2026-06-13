@@ -6,37 +6,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
+import { FAQ_ITEMS } from '@/lib/seo'
 import { getWhatsAppUrl } from '@/lib/whatsapp'
 import { HelpCircle } from 'lucide-react'
 
 export function FAQ() {
-  const faqs = [
-    {
-      question: 'Berapa minimal order?',
-      answer: 'Minimal order adalah 100 Ton/Bulan. Kami dapat melayani kebutuhan perkebunan skala besar, mulai dari 100 - 200 Ton/Bulan atau lebih sesuai kebutuhan perkebunan Anda.'
-    },
-    {
-      question: 'Area mana saja yang bisa dikirim?',
-      answer: 'Kami dapat mengirim ke berbagai wilayah di Indonesia, terutama di area perkebunan kelapa sawit seperti Sumatera (Riau, Sumatera Utara, Sumatera Barat), Kalimantan (Kalimantan Tengah, Kalimantan Timur, Kalimantan Barat), dan Sulawesi. Hubungi kami untuk informasi pengiriman ke wilayah spesifik Anda.'
-    },
-    {
-      question: 'Bagaimana sistem pembayaran?',
-      answer: 'Kami menawarkan berbagai opsi pembayaran yang fleksibel, termasuk pembayaran tunai (cash), tempo (term of payment), dan pembayaran bertahap. Syarat dan ketentuan dapat dinegosiasikan sesuai dengan volume dan durasi kerjasama.'
-    },
-    {
-      question: 'Apakah bisa kontrak jangka panjang?',
-      answer: 'Ya, kami sangat merekomendasikan kontrak jangka panjang untuk memastikan ketersediaan stok dan harga yang stabil. Kontrak dapat dibuat untuk periode 6 bulan, 1 tahun, atau lebih sesuai kebutuhan perkebunan Anda.'
-    },
-    {
-      question: 'Bagaimana kualitas pupuk yang disediakan?',
-      answer: 'Kami hanya menyediakan pupuk berkualitas tinggi dari produsen dan distributor terpercaya yang telah terbukti dan bersertifikat. Kualitas pupuk kami konsisten dan sesuai dengan standar untuk perkebunan kelapa sawit.'
-    },
-    {
-      question: 'Berapa lama proses pengiriman setelah pesanan dikonfirmasi?',
-      answer: 'Lama pengiriman bervariasi tergantung pada lokasi dan volume pesanan. Untuk area terdekat, pengiriman dapat dilakukan dalam 2-5 hari kerja. Untuk area lebih jauh, waktu pengiriman disesuaikan dengan jarak dan ketersediaan armada.'
-    }
-  ]
-
   return (
     <section className="py-12 md:py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -56,7 +30,7 @@ export function FAQ() {
         {/* FAQ Accordion */}
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="space-y-3 md:space-y-4">
-            {faqs.map((faq, index) => (
+            {FAQ_ITEMS.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}

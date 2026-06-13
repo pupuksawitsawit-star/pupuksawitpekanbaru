@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { FAQ_ITEMS, SEO_KEYWORDS, SITE_URL } from '@/lib/seo'
 import { WHATSAPP_DISPLAY_NUMBER } from '@/lib/whatsapp'
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
@@ -15,25 +16,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Supplier Pupuk Kelapa Sawit Skala Besar | Pupuk Sawit",
-  description: "Supply pupuk kelapa sawit 100 - 200 Ton/Bulan dengan kualitas terjamin dan pengiriman stabil. Supplier terpercaya untuk perkebunan sawit di seluruh Indonesia.",
-  keywords: ["pupuk kelapa sawit", "supplier pupuk sawit", "distributor pupuk sawit", "pupuk sawit berkualitas", "supply pupuk perkebunan"],
+  metadataBase: new URL(SITE_URL),
+  title: "Supplier Pupuk Sawit Pekanbaru | Pupuk Organik Kelapa Sawit",
+  description: "Supplier pupuk sawit Pekanbaru untuk pupuk organik kelapa sawit teruji laboratorium. Supply 100 - 200 Ton/Bulan untuk perkebunan dan distributor.",
+  keywords: SEO_KEYWORDS,
   authors: [{ name: "Pupuk Sawit" }],
+  alternates: {
+    canonical: SITE_URL,
+  },
   icons: {
     icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
   },
   openGraph: {
-    title: "Supplier Pupuk Kelapa Sawit Skala Besar",
-    description: "Supply pupuk kelapa sawit 100 - 200 Ton/Bulan dengan kualitas terjamin dan pengiriman stabil",
-    url: "https://pupuksawit.com",
+    title: "Supplier Pupuk Sawit Pekanbaru | Pupuk Organik Kelapa Sawit",
+    description: "Pupuk organik sawit teruji laboratorium untuk kebutuhan supply 100 - 200 Ton/Bulan.",
+    url: SITE_URL,
     siteName: "Pupuk Sawit",
     type: "website",
     locale: "id_ID",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Supplier Pupuk Kelapa Sawit Skala Besar",
-    description: "Supply pupuk kelapa sawit 100 - 200 Ton/Bulan dengan kualitas terjamin",
+    title: "Supplier Pupuk Sawit Pekanbaru",
+    description: "Pupuk organik kelapa sawit teruji laboratorium dengan supply skala besar.",
   },
   robots: {
     index: true,
@@ -105,25 +110,76 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "name": "Pupuk Sawit",
-              "description": "Supplier pupuk kelapa sawit skala besar dengan pengiriman stabil ke seluruh Indonesia",
-              "address": {
-                "@type": "PostalAddress",
-                "addressCountry": "ID",
-                "addressRegion": "Indonesia"
-              },
-              "telephone": WHATSAPP_DISPLAY_NUMBER,
-              "email": "info@pupuksawit.com",
-              "priceRange": "$$$",
-              "areaServed": [
-                "Riau",
-                "Sumatera Utara",
-                "Sumatera Barat",
-                "Kalimantan",
-                "Sulawesi"
-              ],
-              "keywords": "pupuk kelapa sawit, supplier pupuk sawit, distributor pupuk sawit"
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": `${SITE_URL}/#organization`,
+                  "name": "Pupuk Sawit Pekanbaru",
+                  "url": SITE_URL,
+                  "logo": `${SITE_URL}/logo.svg`,
+                  "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": WHATSAPP_DISPLAY_NUMBER,
+                    "contactType": "sales",
+                    "areaServed": "ID",
+                    "availableLanguage": ["id"]
+                  }
+                },
+                {
+                  "@type": "LocalBusiness",
+                  "@id": `${SITE_URL}/#localbusiness`,
+                  "name": "Pupuk Sawit Pekanbaru",
+                  "description": "Supplier pupuk kelapa sawit dan pupuk organik sawit teruji laboratorium untuk kebutuhan perkebunan skala besar.",
+                  "url": SITE_URL,
+                  "telephone": WHATSAPP_DISPLAY_NUMBER,
+                  "email": "info@pupuksawit.com",
+                  "priceRange": "$$$",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Pekanbaru",
+                    "addressRegion": "Riau",
+                    "addressCountry": "ID"
+                  },
+                  "areaServed": [
+                    "Pekanbaru",
+                    "Riau",
+                    "Sumatera Utara",
+                    "Sumatera Barat",
+                    "Kalimantan",
+                    "Sulawesi"
+                  ],
+                  "keywords": SEO_KEYWORDS.join(", ")
+                },
+                {
+                  "@type": "Product",
+                  "@id": `${SITE_URL}/#product`,
+                  "name": "Pupuk Organik Padat Teruji Laboratorium",
+                  "description": "Pupuk organik sawit dengan hasil analisis laboratorium Universitas Andalas: pH 7,40, N Total 2,27%, P2O5 7,27%, K2O 17,24%, C Organik 28,59%, dan C/N Ratio 12,46.",
+                  "brand": {
+                    "@id": `${SITE_URL}/#organization`
+                  },
+                  "category": "Pupuk organik kelapa sawit",
+                  "image": `${SITE_URL}/images/UJI%20LAB.webp`,
+                  "offers": {
+                    "@type": "Offer",
+                    "availability": "https://schema.org/InStock",
+                    "priceCurrency": "IDR",
+                    "url": SITE_URL
+                  }
+                },
+                {
+                  "@type": "FAQPage",
+                  "@id": `${SITE_URL}/#faq`,
+                  "mainEntity": FAQ_ITEMS.map((item) => ({
+                    "@type": "Question",
+                    "name": item.question,
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": item.answer
+                    }
+                  }))
+                }
+              ]
             })
           }}
         />
