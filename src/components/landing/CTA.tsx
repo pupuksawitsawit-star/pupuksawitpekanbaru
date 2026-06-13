@@ -57,7 +57,7 @@ export function CTA() {
                 </div>
                 <div className="flex items-center justify-center gap-2 text-sm md:text-base text-gray-600">
                   <Mail className="w-5 h-5 text-green-600" />
-                  <span>info@pupuksawit.com</span>
+                  <span>pupuksawitsawit@gmail.com</span>
                 </div>
               </div>
 

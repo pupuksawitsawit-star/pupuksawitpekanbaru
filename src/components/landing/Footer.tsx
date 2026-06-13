@@ -23,7 +23,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-green-400" />
-                <span>info@pupuksawit.com</span>
+                <span>pupuksawitsawit@gmail.com</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-green-400" />

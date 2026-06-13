@@ -132,7 +132,7 @@ export default function RootLayout({
                   "description": "Supplier pupuk kelapa sawit dan pupuk organik sawit teruji laboratorium untuk kebutuhan perkebunan skala besar.",
                   "url": SITE_URL,
                   "telephone": WHATSAPP_DISPLAY_NUMBER,
-                  "email": "info@pupuksawit.com",
+                  "email": "pupuksawitsawit@gmail.com",
                   "priceRange": "$$$",
                   "address": {
                     "@type": "PostalAddress",

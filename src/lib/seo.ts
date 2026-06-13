@@ -12,7 +12,7 @@ export const FAQ_ITEMS = [
   {
     question: 'Berapa minimal order?',
     answer:
-      'Minimal order adalah 100 Ton/Bulan. Kami dapat melayani kebutuhan perkebunan skala besar, mulai dari 100 - 200 Ton/Bulan atau lebih sesuai kebutuhan perkebunan Anda.',
+      'Minimal pengiriman mulai dari 3 Ton sampai 10 Ton. Kami juga dapat melayani kebutuhan perkebunan skala besar, mulai dari 100 - 200 Ton/Bulan atau lebih sesuai kebutuhan perkebunan Anda.',
   },
   {
     question: 'Area mana saja yang bisa dikirim?',
