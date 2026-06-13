@@ -71,9 +71,6 @@ export function Solution() {
           <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
             Siap Meningkatkan Produktivitas Perkebunan?
           </h3>
-          <p className="text-sm md:text-base text-gray-600">
-            Konsultasikan kebutuhan pupuk Anda dengan tim kami
-          </p>
         </div>
       </div>
     </section>

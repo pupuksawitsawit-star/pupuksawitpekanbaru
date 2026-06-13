@@ -1,7 +1,7 @@
 'use client'
 
 import { Card } from '@/components/ui/card'
-import { Truck, Shield, MessageSquare, Star } from 'lucide-react'
+import { Truck, Shield, MessageSquare, Star, FileCheck } from 'lucide-react'
 
 export function Trust() {
   const trustPoints = [
@@ -19,6 +19,11 @@ export function Trust() {
       icon: MessageSquare,
       title: 'Komunikasi Responsif',
       description: 'Tim customer service siap membantu menjawab pertanyaan dan kebutuhan Anda'
+    },
+    {
+      icon: FileCheck,
+      title: 'Teruji Laboratorium',
+      description: 'Data analisis pupuk tersedia sebagai bukti kandungan hara dan kualitas produk.'
     }
   ]
 
@@ -60,7 +65,7 @@ export function Trust() {
         </div>
 
         {/* Trust Points */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto mb-8 md:mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto mb-8 md:mb-16">
           {trustPoints.map((point, index) => (
             <Card
               key={index}

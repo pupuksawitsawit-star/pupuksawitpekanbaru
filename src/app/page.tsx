@@ -3,6 +3,7 @@
 import { Hero } from '@/components/landing/Hero'
 import { Problem } from '@/components/landing/Problem'
 import { Solution } from '@/components/landing/Solution'
+import { LabProof } from '@/components/landing/LabProof'
 import { Trust } from '@/components/landing/Trust'
 import { TestimonialCarousel } from '@/components/landing/TestimonialCarousel'
 import { CTA } from '@/components/landing/CTA'
@@ -27,6 +28,7 @@ export default function Home() {
         <Hero />
         <Problem />
         <Solution />
+        <LabProof />
         <Trust />
         <TestimonialCarousel />
         <CTA />
